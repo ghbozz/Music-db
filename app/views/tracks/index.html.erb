@@ -17,9 +17,13 @@
 
   <h4><%= @tracks.count %> Tracks</h4>
 
-  <ul class="list-unstyled list-item">
+  <ul class="list-unstyled list-item list-group list-group-flush">
     <% @tracks.each do |track| %>
-      <li> <%= link_to track.name , track_path(track) %> </li>
+      <li class="list-group-item"> <%= link_to track.name, track_path(track) %>
+      <% if track.all_tags.split(', ').count > 0 %>
+        <span class="list-tags"> <%= track.duration %> | <%= track.bpm %> BPM | <%= track.all_tags %></span>
+      <% end %>
+      </li>
     <% end %>
   </ul>
 </div>

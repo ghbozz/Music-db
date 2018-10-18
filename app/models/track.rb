@@ -9,7 +9,7 @@ class Track < ApplicationRecord
   end
 
   def all_tags
-    tags.map(&:name)
+    tags.map(&:name).join(', ')
   end
 
   # include PgSearch
