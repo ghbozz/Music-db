@@ -43,6 +43,6 @@ class TracksController < ApplicationController
   private
 
   def track_params
-    params.require(:track).permit(:name, :all_tags)
+    params.require(:track).permit(:name, :all_tags, :bpm, :duration)
   end
 end

@@ -12,10 +12,10 @@ class Track < ApplicationRecord
     tags.map(&:name)
   end
 
-  include PgSearch
-  pg_search_scope :search_by_tags,
-    against: [ :tag, :tagging ],
-    using: {
-      tsearch: { prefix: true }
-    }
+  # include PgSearch
+  # pg_search_scope :search_by_tags,
+  #   against: [ :tags, :taggings ],
+  #   using: {
+  #     tsearch: { prefix: true }
+  #   }
 end
