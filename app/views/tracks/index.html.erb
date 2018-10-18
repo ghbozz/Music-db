@@ -1,7 +1,7 @@
 
 <div class="container">
-  <div class="forms-search" id="form-form">
-    <div>
+  <div class="search-form">
+    <div class="input-field">
       <%= form_tag tracks_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
@@ -11,14 +11,13 @@
         %>
     </div>
     <div>
-      <%= button_tag "Search" , class: "btn-search"%>
       <% end %>
     </div>
   </div>
 
-  <ul class="list-unstyled">
+  <ul class="list-unstyled list-item">
     <% @tracks.each do |track| %>
-      <li> <%= track.name %> </li>
+      <li> <%= link_to track.name , track_path(track) %> </li>
     <% end %>
   </ul>
 </div>

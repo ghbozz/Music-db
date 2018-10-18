@@ -1,2 +1,17 @@
-<h1>Tracks#edit</h1>
-<p>Find me in app/views/tracks/edit.html.erb</p>
+
+<div class="container">
+  <h1>Tracks#new</h1>
+  <p>Find me in app/views/tracks/new.html.erb</p>
+  <% tags = ['Pop', 'Rock', 'Hip Hop', 'Landscape', 'Fear', 'Pizz Comedy', 'Sport', 'Travel', 'Magic', 'Adventure'] %>
+
+  <div class="form-content">
+    <%= simple_form_for @track do |f| %>
+      <%= f.input :name %>
+      <%= f.input :all_tags %>
+      <div class="form-btn">
+        <%= f.submit "Add", class: "btn btn-primary" %>
+        <%= link_to 'Back to Tracks', tracks_path, class: 'btn btn-info' %>
+      </div>
+    <% end %>
+   </div>
+ </div>

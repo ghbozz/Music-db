@@ -10,7 +10,7 @@ u1 = User.new(email: 'quentin@musicdb.com', password: 'mdpmdp')
 u1.save
 
 puts 'Creating Tags'
-tags = ['Pop', 'Rock', 'Hip Hop', 'Trip Hop', 'Electro', 'Happy', 'Holliday', 'Landscape', 'Fear', 'Magic', 'Pizz Comedy', 'Travel', 'Adventure', 'Sport', 'Trailer', 'Epic']
+tags = ['pop', 'rock', 'hip Hop', 'trip Hop', 'electro', 'happy', 'holliday', 'landscape', 'fear', 'magic', 'pizz Comedy', 'travel', 'adventure', 'sport', 'trailer', 'epic']
 tags.each do |tag|
   t = Tag.new(name: tag)
   t.save

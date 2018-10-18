@@ -14,6 +14,7 @@ class TracksController < ApplicationController
   end
 
   def show
+    @track = Track.find(params[:id])
   end
 
   def new
@@ -27,9 +28,13 @@ class TracksController < ApplicationController
   end
 
   def edit
+    @track = Track.find(params[:id])
   end
 
   def update
+    @track = Track.find(params[:id])
+    @track.update(track_params)
+    redirect_to track_path(@track)
   end
 
   def delete

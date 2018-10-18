@@ -1,2 +1,6 @@
-<h1>Tracks#show</h1>
-<p>Find me in app/views/tracks/show.html.erb</p>
+<div class="container">
+  <h1><%= @track.name %></h1>
+  <p>BPM: <%= @track.bpm %></p>
+  <p>Duration: <%= @track.duration %></p>
+  <%= link_to 'Edit', edit_track_path %>
+</div>
