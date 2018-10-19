@@ -9,7 +9,7 @@ class Track < ApplicationRecord
   end
 
   def all_tags
-    tags.map(&:name).join(', ')
+    tags.map(&:name).map { |tag| tag.capitalize }.join(', ')
   end
 
   # include PgSearch
