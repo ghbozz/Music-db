@@ -3,4 +3,5 @@
   <p>BPM: <%= @track.bpm %></p>
   <p>Duration: <%= @track.duration %></p>
   <%= link_to 'Edit', edit_track_path %>
+  <%= link_to 'Delete', track_path, method: :delete %>
 </div>

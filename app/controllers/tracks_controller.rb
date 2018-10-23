@@ -39,7 +39,10 @@ class TracksController < ApplicationController
     redirect_to track_path(@track)
   end
 
-  def delete
+  def destroy
+    @track = Track.find(params[:id])
+    @track.destroy
+    redirect_to tracks_path
   end
 
   private
