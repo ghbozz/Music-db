@@ -1,7 +1,6 @@
 class TracksController < ApplicationController
+
   def index
-    # if params[:query].present?
-    #   @tracks = Track.search_by_tags(params[:query])
     if params[:query].present?
       @all_tracks = Track.all
       @tracks = Array.new
